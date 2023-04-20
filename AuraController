@@ -1,0 +1,47 @@
+({
+	imagem1 : function(component, event, helper) {		
+       var imagem01 = component.get("v.imagem01");        
+        if(imagem01 == true){
+            component.set("v.imagem01", false);
+        }else{
+            component.set("v.imagem01", true);
+        }       
+},
+	imagem2 : function(component, event, helper) {
+		
+       var imagem02 = component.get("v.imagem02");
+        
+        if(imagem02 == true){
+            component.set("v.imagem02", false);
+        }else{
+            component.set("v.imagem02", true);
+        }       
+},
+	imagem3 : function(component, event, helper) {
+		
+       var imagem03 = component.get("v.imagem03");
+        
+        if(imagem03 == true){
+            component.set("v.imagem03", false);
+        }else{
+            component.set("v.imagem03", true);
+        }
+        
+},
+    Timagem : function(component, event, helper) {
+    var imagem01 = component.get("v.imagem01");
+    var imagem02 = component.get("v.imagem02");
+    var imagem03 = component.get("v.imagem03");
+
+    if(imagem01 == true || imagem02 == true || imagem03 == true) {
+        component.set("v.imagem01", false);
+        component.set("v.imagem02", false);
+        component.set("v.imagem03", false);
+    } else {
+        component.set("v.imagem01", true);
+        component.set("v.imagem02", true);
+        component.set("v.imagem03", true);
+    }
+}
+    
+})
