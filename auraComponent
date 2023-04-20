@@ -1,0 +1,40 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	
+       
+    <aura:attribute name="imagem01" type="Boolean" default="true" description= "True or False"/>
+    <aura:attribute name="imagem02" type="Boolean" default="true" description= "True or False"/>
+    <aura:attribute name="imagem03" type="Boolean" default="true" description= "True or False"/>
+    <aura:attribute name="todasimagens" type="Boolean" default="true" description= "True or False"/>
+         
+    
+    
+    
+     <div class="slds-box slds-theme_default">
+	 <lightning:button variant="success" label="Todas as imagens" title="Todas as imagens" onclick="{! c.Timagem }"/>
+    </div>
+    
+    <div class="slds-box slds-theme_default">
+    <lightning:button variant="brand" label="Imagem 01" title="Click Aqui" onclick="{! c.imagem1 }" />
+    </div>
+    
+    <aura:if isTrue="{!v.imagem01}">
+     <img src="{!$Resource.img4}"/>     
+    </aura:if>
+    
+    <div class="slds-box slds-theme_default">
+    <lightning:button variant="brand" label="Imagem 02" title="Click Aqui" onclick="{! c.imagem2 }" />
+    </div>
+    
+    <aura:if isTrue="{!v.imagem02}">
+     <img src="{!$Resource.img2}"/>     
+    </aura:if>
+    
+    <div class="slds-box slds-theme_default">
+    <lightning:button variant="brand" label="Imagem 03" title="Click Aqui" onclick="{! c.imagem3 }" />
+    </div>
+    
+    <aura:if isTrue="{!v.imagem03}">
+     <img src="{!$Resource.img3}"/>     
+    </aura:if>
+    
+</aura:component>
